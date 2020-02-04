@@ -1,4 +1,12 @@
-# postgres
+[![](https://img.shields.io/docker/pulls/adorsys/postgres.svg?logo=docker)](https://hub.docker.com/r/adorsys/postgres/)
+[![](https://img.shields.io/docker/stars/adorsys/postgres.svg?logo=docker)](https://hub.docker.com/r/adorsys/postgres/)
+
+# adorsys/postgres
+
+https://hub.docker.com/r/adorsys/postgres/
+
+## Description
+
 Postgres container based on https://github.com/sclorg/postgresql-container but create multiple databases
 
 # Environment
