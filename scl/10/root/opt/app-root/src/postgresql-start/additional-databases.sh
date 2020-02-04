@@ -45,7 +45,7 @@ for POSTGRESQL_DATABASE in $(echo "${POSTGRESQL_ADITIONAL_DATABASES:-}" | tr ','
 
     export postinitdb_actions=simple_db
 
-    if ! _psql --set=username="${POSTGRESQL_USER}" <<< "SELECT 1 FROM pg_roles WHERE rolname=:'username';" | grep -q 1; then
+    if ! _psql --set=username="${POSTGRESQL_USER}" -tAc "SELECT 1 FROM pg_roles WHERE rolname=:'username';" | grep -q 1; then
       echo "Creating additional database ${POSTGRESQL_DATABASE} ..."
       create_users
     fi
