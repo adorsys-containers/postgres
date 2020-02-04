@@ -1,0 +1,7 @@
+.github/workflows/ci.yaml:
+  checkoutTestApplications: true
+  env:
+    - DOCKER_IMAGE: adorsys/postgres
+      TAG: 10-scl
+      DIR: scl/10
+      SQUASH: 'true'
