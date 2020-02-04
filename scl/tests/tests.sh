@@ -9,7 +9,7 @@ docker run --rm \
   --network=host \
   --name postgres-test \
   -e POSTGRESQL_ADMIN_PASSWORD=password \
-  -e POSTGRESQL_ADITIONAL_DATABASES=db \
+  -e POSTGRESQL_ADDITIONAL_DATABASES=db \
   -e POSTGRESQL_DATABASE_db_USER=dbuser \
   "${DOCKER_IMAGE}:${TAG}" 2>&1 | grep "Use 'POSTGRESQL_DATABASE_db_PASSWORD' to define one."
 
@@ -23,7 +23,7 @@ docker run -d \
   -e POSTGRESQL_USER=defaultuser \
   -e POSTGRESQL_PASSWORD=defaultpassword \
   -e POSTGRESQL_DATABASE=defaultdb \
-  -e POSTGRESQL_ADITIONAL_DATABASES=db \
+  -e POSTGRESQL_ADDITIONAL_DATABASES=db \
   -e POSTGRESQL_DATABASE_db_USER=dbuser \
   -e POSTGRESQL_DATABASE_db_PASSWORD=dbpassword \
   "${DOCKER_IMAGE}:${TAG}"
@@ -39,7 +39,7 @@ docker run -d \
   -e POSTGRESQL_USER=defaultuser \
   -e POSTGRESQL_PASSWORD=defaultpassword \
   -e POSTGRESQL_DATABASE=defaultdb \
-  -e POSTGRESQL_ADITIONAL_DATABASES=db \
+  -e POSTGRESQL_ADDITIONAL_DATABASES=db \
   -e POSTGRESQL_DATABASE_db_USER=dbuser \
   -e POSTGRESQL_DATABASE_db_PASSWORD=dbpassword \
   "${DOCKER_IMAGE}:${TAG}"

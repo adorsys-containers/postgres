@@ -5,7 +5,7 @@ set -euo pipefail
 _psql () { psql --set ON_ERROR_STOP=1 "$@" ; }
 
 
-for POSTGRESQL_DATABASE in $(echo "${POSTGRESQL_ADITIONAL_DATABASES:-}" | tr ',' ' '); do
+for POSTGRESQL_DATABASE in $(echo "${POSTGRESQL_ADDITIONAL_DATABASES:-}" | tr ',' ' '); do
   # Use subshell to preserve external environment
   (
     echo "Setup additional database ${POSTGRESQL_DATABASE} ..."

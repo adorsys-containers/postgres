@@ -13,9 +13,9 @@ Postgres container based on https://github.com/sclorg/postgresql-container but c
 
 | Key | Description | Example |
 |-----|-------------|---------|
-| POSTGRESQL_ADITIONAL_DATABASES | additional databases as comma separated list | `POSTGRESQL_ADITIONAL_DATABASES=db` |
-| POSTGRESQL_DATABASE_<name>_USER | username for database `<name>` | `POSTGRESQL_DATABASE_db_USER=dbuser` |
-| POSTGRESQL_DATABASE_<name>_PASSWORD | password for database `<name>` | `POSTGRESQL_DATABASE_db_PASSWORD=dbpassword` |
+| `POSTGRESQL_ADDITIONAL_DATABASES` | additional databases as comma separated list | `POSTGRESQL_ADDITIONAL_DATABASES=db` |
+| `POSTGRESQL_DATABASE_<name>_USER` | username for database `<name>` | `POSTGRESQL_DATABASE_db_USER=dbuser` |
+| `POSTGRESQL_DATABASE_<name>_PASSWORD` | password for database `<name>` | `POSTGRESQL_DATABASE_db_PASSWORD=dbpassword` |
 
 # Example
 ```bash
@@ -25,7 +25,7 @@ docker run -d --rm \
   -e POSTGRESQL_USER=defaultuser \
   -e POSTGRESQL_PASSWORD=defaultpassword \
   -e POSTGRESQL_DATABASE=defaultdb \
-  -e POSTGRESQL_ADITIONAL_DATABASES=db \
+  -e POSTGRESQL_ADDITIONAL_DATABASES=db \
   -e POSTGRESQL_DATABASE_db_USER=dbuser \
   -e POSTGRESQL_DATABASE_db_PASSWORD=dbpassword \
   adorsys/postgres:10-scl
