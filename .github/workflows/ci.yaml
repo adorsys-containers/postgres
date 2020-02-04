@@ -24,6 +24,11 @@ jobs:
             DOCKER_IMAGE: 'adorsys/postgres'
             SQUASH: 'true'
             TAG: '10-scl'
+          -
+            DIR: 'scl/12'
+            DOCKER_IMAGE: 'adorsys/postgres'
+            SQUASH: 'true'
+            TAG: '12-scl'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
