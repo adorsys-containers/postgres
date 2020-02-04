@@ -5,3 +5,7 @@
       TAG: 10-scl
       DIR: scl/10
       SQUASH: 'true'
+    - DOCKER_IMAGE: adorsys/postgres
+      TAG: 12-scl
+      DIR: scl/12
+      SQUASH: 'true'
