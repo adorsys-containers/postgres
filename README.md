@@ -6,8 +6,8 @@ Postgres container based on https://github.com/sclorg/postgresql-container but c
 | Key | Description | Example |
 |-----|-------------|---------|
 | POSTGRESQL_ADITIONAL_DATABASES | additional databases as comma separated list | `POSTGRESQL_ADITIONAL_DATABASES=db` |
-| POSTGRESQL_DATABASE_<name>_USER | additional databases as comma separated list | `POSTGRESQL_DATABASE_db_USER=dbuser` |
-| POSTGRESQL_DATABASE_<name>_PASSWORD | additional databases as comma separated list | `POSTGRESQL_DATABASE_db_PASSWORD=dbpassword` |
+| POSTGRESQL_DATABASE_<name>_USER | username for database `<name>` | `POSTGRESQL_DATABASE_db_USER=dbuser` |
+| POSTGRESQL_DATABASE_<name>_PASSWORD | password for database `<name>` | `POSTGRESQL_DATABASE_db_PASSWORD=dbpassword` |
 
 # Example
 ```bash
