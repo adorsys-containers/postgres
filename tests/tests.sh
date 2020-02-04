@@ -15,7 +15,7 @@ docker run --rm \
 
 #### TEST: User should not recreated after restart
 #### INITIAL RUN
-docker run -d --rm \
+docker run -d \
   --network=host \
   --name postgres-test \
   -v postgres-test-volume:/var/lib/pgsql/data \
@@ -31,7 +31,7 @@ docker run -d --rm \
 sleep 5
 docker rm -f postgres-test
 
-docker run -d --rm \
+docker run -d \
   --network=host \
   --name postgres-test \
   -v postgres-test-volume:/var/lib/pgsql/data \
