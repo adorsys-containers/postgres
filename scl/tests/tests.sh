@@ -2,6 +2,7 @@
 
 set -eu
 
+# shellcheck disable=SC2154
 trap 'rv=$?; if docker inspect postgres-test > /dev/null 2>&1; then docker logs postgres-test; docker rm -f postgres-test; fi; exit $rv' INT TERM EXIT
 
 #### TEST: some environments provided
