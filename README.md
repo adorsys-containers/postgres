@@ -17,6 +17,11 @@ Postgres container based on https://github.com/sclorg/postgresql-container but c
 | `POSTGRESQL_DATABASE_<name>_USER` | username for database `<name>` | `POSTGRESQL_DATABASE_db_USER=dbuser` |
 | `POSTGRESQL_DATABASE_<name>_PASSWORD` | password for database `<name>` | `POSTGRESQL_DATABASE_db_PASSWORD=dbpassword` |
 
+
+## Initial DB seeding
+
+If you need to seed your database, e.g. create schema, etc. just create a file called `/docker-entrypoint-initdb.d/${DATABASE_NAME}.sql`.
+
 # Example
 ```bash
 docker run -d --rm \
