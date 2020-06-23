@@ -48,9 +48,18 @@ for POSTGRESQL_DATABASE in $(echo "${POSTGRESQL_ADDITIONAL_DATABASES:-}" | tr ',
     if ! _psql --set=username="${POSTGRESQL_USER}" -tA <<< "SELECT 1 FROM pg_roles WHERE rolname=:'username';" | grep -q 1; then
       echo "Creating additional database ${POSTGRESQL_DATABASE} ..."
       create_users
-    fi
 
-    # shellcheck source=/dev/null
-    . "${CONTAINER_SCRIPTS_PATH}/start/set_passwords.sh"
+      # shellcheck source=/dev/null
+      . "${CONTAINER_SCRIPTS_PATH}/start/set_passwords.sh"
+
+      if [ -f "/docker-entrypoint-initdb.d/${POSTGRESQL_DATABASE}.sql" ]; then
+
+        echo "Import init sql file for database ${POSTGRESQL_DATABASE} ..."
+        PGPASSWORD="${POSTGRESQL_PASSWORD}" _psql --username "${POSTGRESQL_USER}" --dbname "${POSTGRESQL_DATABASE}" < "/docker-entrypoint-initdb.d/${POSTGRESQL_DATABASE}.sql"
+      fi
+    else
+      # shellcheck source=/dev/null
+      . "${CONTAINER_SCRIPTS_PATH}/start/set_passwords.sh"
+    fi
   )
 done
