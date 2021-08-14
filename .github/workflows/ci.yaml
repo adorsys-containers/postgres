@@ -29,6 +29,11 @@ jobs:
             DOCKER_IMAGE: 'adorsys/postgres'
             SQUASH: 'true'
             TAG: '12-scl'
+          -
+            DIR: 'scl/13'
+            DOCKER_IMAGE: 'adorsys/postgres'
+            SQUASH: 'true'
+            TAG: '13-scl'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -138,7 +143,7 @@ jobs:
             done;
             (exit $s)
           fi
-      
+
       - name: Slack notification if pipeline failed
         # https://github.community/t5/GitHub-Actions/GitHub-Actions-branch-conditional/m-p/29794
         uses: 8398a7/action-slack@v3.8.0
