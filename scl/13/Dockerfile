@@ -1,9 +1,9 @@
-FROM centos/postgresql-12-centos7:latest
+FROM centos/postgresql-13-centos7:latest
 
 USER 0
 
 # https://github.com/sclorg/postgresql-container/issues/369
-RUN rm -f /etc/yum.repos.d/cbs.centos.org_repos_sclo7-rh-postgresql12-rh-candidate_x86_64_os_.repo \
+RUN rm -f /etc/yum.repos.d/cbs.centos.org_repos_sclo7-rh-postgresql13-rh-candidate_x86_64_os_.repo \
   && yum upgrade -y \
   && yum clean all \
   && yum -y clean all --enablerepo='*' \
