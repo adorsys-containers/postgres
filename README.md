@@ -42,3 +42,5 @@ docker run -d --rm \
 |-----|-------------|
 | 10-scl | [centos/postgresql-10-centos7](https://hub.docker.com/r/centos/postgresql-10-centos7) |
 | 12-scl | [centos/postgresql-12-centos7](https://hub.docker.com/r/centos/postgresql-12-centos7) |
+| 13-scl | [centos/postgresql-13-centos7](https://hub.docker.com/r/centos/postgresql-13-centos7) |
+| 15-scl | [quay.io/sclorg/postgresql-15-c9s](https://quay.io/sclorg/postgresql-15-c9s) |
